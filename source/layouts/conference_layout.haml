@@ -15,18 +15,18 @@
             Pace University, New York City
 
           %p
-            %a.button.success{ href: '/conference/scholarships' } Scholarships
-            %a.button.primary{ href: 'https://guestlistapp.com/events/306111' }
-              Register NOW!
+            %a.button.success{ href: '/scholarships' } Scholarships
+            -#%a.button.primary{ href: 'https://guestlistapp.com/events/306111' }
+            -#  Register NOW!
             %a.button.notice{ href: '/sponsor' } Sponsor
 
           %p
             Check out our
             = succeed '.' do
-              = link_to "fantastic sponsors", "/conference/sponsors"
+              = link_to "fantastic sponsors", "/sponsors"
 
           %h4.childcare-callout
-            %a{ href: '/conference/childcare' }
+            %a{ href: '/childcare' }
               Childcare Available!
 
     #content
@@ -36,13 +36,13 @@
       .developer-definition
         %a{ name: 'developer-definition' }
         %small
-          We define "software developer" as anyone who has written a line of code 
-          (HTML, CSS, JavaScript, Ruby, Python, Java, whatever) and can explain 
-          what it does.  Designers, E-book publishers, and beginners as well as 
-          engineers with 20 years experience have enjoyed our workshops and been 
+          We define "software developer" as anyone who has written a line of code
+          (HTML, CSS, JavaScript, Ruby, Python, Java, whatever) and can explain
+          what it does.  Designers, E-book publishers, and beginners as well as
+          engineers with 20 years experience have enjoyed our workshops and been
           inspired by each other.
 
       %p
         We wouldn't be here without the generous support of
         = succeed '.' do
-          = link_to "our sponsors", "/conference/sponsors"
+          = link_to "our sponsors", "/sponsors"

@@ -32,13 +32,33 @@
 
           %nav{ role: "navigation" }
             %ul#js-navigation-menu.navigation-menu.show
-              %li.nav-link.conference.more
-                = link_to "Conference", "http://2016.writespeakcode.com"
+              %li.nav-link.more.conference
+                %a{ href:"/" } Conference
                 %ul.submenu
                   %li
-                    = link_to 'Call for Proposals', 'http://2016.writespeakcode.com/cfp/'
+                    = link_to 'Our Sponsors!', '/sponsors'
+                  %li.divided
+                    = link_to 'Write - Thurs 3/19', '/write'
                   %li
-                    = link_to 'Mentors / Panelists / Lightning Talks', 'http://2016.writespeakcode.com/nominate/'
+                    = link_to 'Speak - Fri 3/20', '/speak'
+                  %li
+                    = link_to 'Code - Sat 3/21', '/code'
+                  %li.divided
+                    = link_to 'Sponsor conference', '/sponsor'
+                  %li
+                    = link_to 'Scholarships', '/scholarships'
+                  %li.divided
+                    = link_to 'Speakers', '/speakers'
+                  %li
+                    = link_to 'Schedule', '/schedule'
+                  %li
+                    = link_to 'Program of Events', '/program'
+                  %li.divided
+                    = link_to 'Testimonials', '/testimonials'
+                  %li
+                    = link_to 'Childcare', '/childcare'
+                  %li
+                    = link_to 'Accessibility', '/childcare'
 
               %li.nav-link.meetups
                 %a{ href:"/chapters" } Chapters

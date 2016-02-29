@@ -1,151 +1,157 @@
-.index {
-  .navigation {
-    background-color: transparent;
-    text-align: center;
-    border: 0;
+#main.conference, #main.sponsors {
+  background-color: $brand-accent-dark;
+}
 
-    position: absolute;
-    top: 0;
+.conference_layout {
 
-    .logo, .navigation-tools { display: none; }
+  .childcare-callout {
+    text-transform: uppercase;
+    background-color: $dark-gray;
+  }
 
-    nav {
-      float: none;
+  .hero {
+    $hero-bottom: 52px;
+    padding-bottom: $hero-bottom;
+    @include media($large-screen) { padding-bottom: $hero-bottom - 10; }
+
+    .hero-inner .hero-copy h4.childcare-callout a {
+      color: $white;
     }
   }
 
-  #main {
-    padding: 0;
-
-    h1 { color: $white; }
+  .day_summaries {
+    background-color: $light-yellow;
+    padding-bottom: .2em;
+    margin: 1em auto;
   }
 
-  .banner {
-    margin: 0;
-    position: relative;
-    min-height: 600px;
-    color: $white;
+  #content {
+    margin-top: -100px;
     text-align: center;
 
-    .wrap {
-      @include outer-container;
+    h1 {
+      color: $brand-accent;
+      .fa { color: $light-accent; }
+    }
 
-      overflow: hidden;
-      text-align: center;
+    h3 { margin: 1em auto; }
 
-      height: auto;
+    h2.change-world {
+      margin-bottom: 1em;
+
+      span {
+        @include display-font('thin');
+      }
+
+      .fa { color: $brand-primary; }
 
       @include media($large-screen) {
-        height: 100%;
+        font-size: $h1-font-size ;
       }
     }
 
-    .copy-wrap {
-      text-align: center;
-      color: $white;
-      a:not(.button) { @include colored-link($white); }
+    h4 {
+      .fa {
+        color: $notice-color;
+        padding: 0 .5em;
+      }
+    }
+
+    .actions {
+      .fa-li {
+        position: relative;
+        color: $notice-color;
+        left: 0;
+      }
+
+      @media screen and (max-width: $medium-screen) {
+        .fa-li { display: none; }
+        text-align: left;
+        list-style-type: disc;
+        margin-top: .5em;
+      }
+    }
+  }
+
+  .breadcrumbs {
+    &.write li.write, &.speak li.speak, &.code li.code {
+      a { @include colored-link($brand-primary) }
+    }
+  }
+
+  &.sub_page {
+    .hero {
+      .details, .header-break { display: none; }
+
+      font-size: .8em;
+
+      $hero-bottom: 62px;
+      padding-bottom: $hero-bottom;
+      @include media($large-screen) { padding-bottom: $hero-bottom - 10; }
 
       h1 {
-        font-size: 3em;
+        @include display-font-bold;
+        @include media($large-screen) { font-size: $sm-h1-font-size; }
+      }
+
+      h2 {
+        @include display-font-normal;
+        @include media($large-screen) { font-size: $sm-h2-font-size; }
       }
     }
 
-    border-bottom: 10px solid $brand-primary-dark;
-  }
+    #content {
+      h2 {
+        margin: 0 auto 1em auto;
 
-  #banner {
-    background-image: url(image_path('2013-conf/wsc-sign.jpg'));
-    background-repeat: no-repeat;
-    background-size: cover;
+        .fa {
+          padding: 0 .5em;
+        }
+      }
 
+      .themes {
+        color: $brand-primary;
+        margin-bottom: 1em;
+      }
 
-    .overlay {
-      @include position(absolute, 0px 0px 0px 0px);
-      display: block;
-      background-color: transparentize($brand-primary-dark, .4);
+      .credits {
+        margin-top: 1em;
+      }
     }
 
-    .copy-wrap {
-      @include span-columns(12);
+  }
 
-      position: relative;
-      top: auto;
+  .developer-definition {
+    @include square-border;
+    margin-top: 3em;
+    background-color: $alert-color;
+    padding: .5em;
+    border: 1px solid $light-gray;
+  }
+
+  a.small {
+    font-size: .8em;
+    color: $white;
+
+    &, &:hover, &:linked, &:visited { color: $white; }
+  }
+}
+
+#main.scholarships {
+  #content {
+    .breadcrumbs li a { @include colored-link($brand-primary) }
+    .scholarship {
+      margin: 3em 1em 1em;
+      text-align: left;
+
+      h2 {
+        margin-bottom: .5em;
+      }
+    }
+
+    .closed {
       margin-top: 5em;
-
-      @include media($large-screen) {
-        @include span-columns(7);
-
-        margin-top: 8em;
-        top: 50%;
-      }
-
-      h1, h2 {
-        text-shadow: 1px 1px 2px $dark-gray;
-      }
-
-      p {
-        font-size: 1.3em;
-        padding-top: 2em;
-        text-shadow: 1px 1px 1px $dark-gray;
-      }
-    }
-
-     .fa-caret-down {
-       @include media($large-screen) {
-        @include span-columns(7);
-        /*bottom: -25px;*/
-       }
-     }
-
-  }
-
-  #banner2 {
-    background-color: $white;
-
-    .image-wrap {
-      max-width: 100%;
-      max-height: 590px;
-      margin: 0;
-      padding: 0;
-
-      @include media($large-screen) {
-        float: left;
-        max-width: 31%;
-      }
-
-      img {
-        max-height: 590px;
-      }
-    }
-
-    .copy-wrap {
-      @include span-columns(12);
-      color: $base-font-color;
-      padding: 1em;
-      height: auto;
-
-      a:not(.button) { 
-        @include colored-link($brand-primary); 
-      }
-
-      h1 { font-size: $sm-h1-font-size; }
-      h2 { font-size: $sm-h2-font-size; }
-      h2, h3 { text-align: center; }
-
-      p, h3 {
-        padding: .5em 0 0 0;
-      }
-
-      @include media($large-screen) {
-        .header-break { display: block; }
-      }
+      border-top: $section-border;
     }
   }
-  
-    .newsletter-signup {
-      #mce-EMAIL {
-        max-width: 290px;
-      margin: 10px auto;
-      }
-    }
 }
